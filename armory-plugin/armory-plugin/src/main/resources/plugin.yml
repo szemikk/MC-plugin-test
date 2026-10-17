@@ -1,0 +1,20 @@
+name: Armory
+version: 1.0.0
+main: dev.armory.ArmoryPlugin
+api-version: '1.21'
+description: Upgradeable custom weapons with abilities and a built-in recipe browser.
+commands:
+  armory:
+    description: Open the weapon recipe browser or manage weapons.
+    aliases: [weapons, recipes]
+    usage: /armory [browser|list|give|reload]
+permissions:
+  armory.browse:
+    description: Open the recipe browser
+    default: true
+  armory.use:
+    description: Use weapon abilities
+    default: true
+  armory.admin:
+    description: Give weapons and reload the config
+    default: op

@@ -1,0 +1,114 @@
+# ---------------------------------------------------------------
+# Armory configuration
+# Run /armory reload after editing.
+# ---------------------------------------------------------------
+settings:
+  # Kill points needed to reach each level. The first entry is level 0 and must be 0.
+  # Five more entries = five upgrade levels.
+  level-thresholds: [0, 5, 15, 30, 50, 80]
+
+  # Each level adds this fraction of extra melee damage (0.08 = +8% per level).
+  damage-bonus-per-level: 0.08
+
+  # Each level shortens the ability cooldown by this fraction (never below 40% of base).
+  cooldown-reduction-per-level: 0.06
+
+  # Points earned per kill while holding the weapon.
+  kill-points:
+    player: 3
+    mob: 1
+
+  # Killing the same player again within this many seconds gives no points.
+  anti-farm-seconds: 120
+
+  # Weapons do not lose durability.
+  unbreakable: true
+
+  # Unlock every weapon recipe in the vanilla recipe book when a player joins.
+  discover-recipes-on-join: true
+
+# ---------------------------------------------------------------
+# Weapons
+#
+# ability: cinder_burst | soul_reap | phase_step | quake_slam
+# passive: ignite | lifesteal | momentum | concuss
+# recipe.shape: up to 3 rows of up to 3 characters, space = empty slot
+# recipe.ingredients: one letter per material (avoid the letters Y and N)
+# ---------------------------------------------------------------
+weapons:
+  emberglass_cleaver:
+    name: "<gradient:#ff6a00:#ffd000>Emberglass Cleaver</gradient>"
+    material: NETHERITE_AXE
+    ability: cinder_burst
+    passive: ignite
+    base-cooldown: 14
+    description:
+      - "A cleaver of fused glass and cooled magma."
+      - "It never quite stops glowing."
+    recipe:
+      shape:
+        - "DMG"
+        - "DB "
+        - " B "
+      ingredients:
+        D: DIAMOND
+        M: MAGMA_BLOCK
+        G: GLASS
+        B: BLAZE_ROD
+
+  gravewhisper_scythe:
+    name: "<gradient:#6a5acd:#b19cd9>Gravewhisper Scythe</gradient>"
+    material: DIAMOND_HOE
+    ability: soul_reap
+    passive: lifesteal
+    base-cooldown: 18
+    description:
+      - "Its blade hums with voices that"
+      - "are not quite finished speaking."
+    recipe:
+      shape:
+        - "DDC"
+        - " B "
+        - " B "
+      ingredients:
+        D: DIAMOND
+        C: CRYING_OBSIDIAN
+        B: BONE_BLOCK
+
+  zephyr_needle:
+    name: "<gradient:#7fffd4:#e0ffff>Zephyr Needle</gradient>"
+    material: DIAMOND_SWORD
+    ability: phase_step
+    passive: momentum
+    base-cooldown: 10
+    description:
+      - "A slender blade that cuts the wind"
+      - "before it cuts anything else."
+    recipe:
+      shape:
+        - " PD"
+        - "PED"
+        - "S  "
+      ingredients:
+        P: PHANTOM_MEMBRANE
+        D: DIAMOND
+        E: ENDER_PEARL
+        S: STICK
+
+  quakebreaker_maul:
+    name: "<gradient:#a0522d:#d2b48c>Quakebreaker Maul</gradient>"
+    material: MACE
+    ability: quake_slam
+    passive: concuss
+    base-cooldown: 16
+    description:
+      - "Heavy enough that the ground"
+      - "flinches before it lands."
+    recipe:
+      shape:
+        - "III"
+        - "IRI"
+        - " R "
+      ingredients:
+        I: IRON_BLOCK
+        R: BREEZE_ROD
